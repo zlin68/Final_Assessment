@@ -1,0 +1,467 @@
+* {
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	box-sizing: border-box;
+	
+	
+}
+ul{
+	list-style: none;
+}
+ol li{
+	line-height: 200%;
+}
+body {
+	background-image: linear-gradient(to bottom, rgba(0,0,222,0), rgba(0,0,222,1));
+	
+}
+
+.wrapper{
+	padding: 0px 20px;
+}
+.wrapper .header {
+	padding: 0px;
+	border: 1px solid black;
+	position: fixed;
+	border-radius: 10px;
+    background: white;
+    width: calc(100% - 40px);
+    height: 70px;
+    top: 0;
+}
+
+.wrapper .header .header-menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .header .header-menu .title h1 {
+    color: rgba(255,0,0,.7);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+	align-items: center;
+	text-align: right;
+}
+
+
+.wrapper .header .header-menu .sidebar-btn {
+    color: rgba(255,255,255,.7);
+    position: absolute;
+    margin-left: 9.4em;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wrapper .header .header-menu .sidebar-btn:hover {
+    opacity: .6;
+}
+
+.wrapper .header .header-menu {
+    display: flex;
+}
+.wrapper .sidebar {
+	border: 1px solid black;
+	background: white;
+	position: fixed;
+	top: 80px;
+	width: 250px;
+	height: calc(100% - 160px);
+	overflow-y: hidden;
+}
+.wrapper .sidebar .sidebar-menu {
+	overflow: hidden;
+}
+
+
+.wrapper .sidebar .sidebar-menu .item {
+	width: 250px;
+	overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn {
+	display: block;
+	color: black;
+	position: relative;
+	padding: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover {
+	opacity: .6;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i {
+	margin-right: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down {
+	float: right;
+	font-size: 1em;
+	margin-top: .2em;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu {
+	background: rgba(255,255,255,.6);
+	overflow: hidden;
+	max-height: 0;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a {
+	display: block;
+	position: relative;
+	color: rgba(0,0,0,.7);
+	white-space: nowrap;
+	font-size: 1em;
+	padding: 1em;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover {
+	opacity: .6;
+}
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:active {
+	opacity: .6;
+}
+
+.wrapper .sidebar .sidebar-menu .item:hover .sub-menu {
+    max-height: 500px;
+}
+/* Body section without side panel*/
+.wrapper .main-container {
+	border: 1px solid black;
+	background: white;
+    width: calc(100% - 250px);
+	margin-top: 80px;
+	margin-left: 260px;
+	margin-bottom: 80px;
+    height: calc(100vh - 160px);
+	overflow-y: hidden;
+}
+.wrapper .main-container .content {
+	padding: 0 20px;
+}
+.wrapper .main-container .content .p{
+	color: red;
+	line-height: 80%;
+}
+/* Body section with side panel*/
+.wrapper .main-container1 {
+	border: 1px solid black;
+	background: white;
+    width: calc(100% - 500px);
+	margin-top: 80px;
+	margin-left: 260px;
+	margin-bottom: 80px;
+    height: calc(100vh - 160px);
+	overflow-y: hidden;
+}
+.wrapper .main-container1 .content {
+	padding: 0 20px;
+}
+.wrapper .main-container1 .content .p{
+	color: red;
+	line-height: 80%;
+}
+/* Side Panel*/
+.wrapper .main-panel {
+	position: fixed;
+	border: 1px solid black;
+	background: white;
+    width: 240px;
+	top: 80px;
+	margin-left: calc(100% - 285px);
+	margin-bottom: 80px;
+    height: calc(100vh - 160px);
+	overflow-y: hidden;
+}
+.wrapper .main-panel .content {
+	padding: 0 20px;
+}
+.wrapper .main-panel .content .p{
+	color: red;
+	line-height: 80%;
+}
+/* Footer section*/
+.wrapper .footer {
+	padding: 0px;
+	border: 1px solid black;
+	position: fixed;
+	border-radius: 10px;
+    background: white;
+    width: calc(100% - 40px);
+    height: 70px;
+    bottom: 0;
+}
+
+.wrapper .footer .footer-menu {
+    height: 100%;
+    display: flex;
+	justify-content: center;
+}
+.wrapper .footer .footer-menu .title h1 {
+    color: rgba(255,0,0,.7);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900;
+	align-items: center;
+	text-align: right;
+}
+
+.wrapper .footer .footer-menu .title p a {
+    color: rgba(255,0,0,.7);
+    font-size: 1.6em;
+    font-weight: 900;
+	word-wrap: normal;
+}
+
+.wrapper .footer .footer-menu {
+    display: flex;
+}
+/*Input form*/
+input[type=text],input[type=email],input[type=date],input[type=number],input[type=password], select,option, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize:none;
+}
+
+.row label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+.label1 {
+	text-align: right;
+	float: right;
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+.label2 {
+	text-align: left;
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+input[type=reset] {
+	margin-right: 10px;
+	background-color:#F3191D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=reset]:hover {
+	background-color: #BB0508;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+	text-align: left;
+}
+.col-35l {
+	margin-left: 10px;
+	width: 35%;
+	margin-top: 6px;
+	text-align: left;
+}
+.col-35r {
+	float: left;
+	margin-left: 10%;
+	width: 35%;
+	margin-top: 6px;
+	text-align: left;
+}
+.col-45l{
+	float: left;
+	width: 45%;
+	margin-top: 6px;
+}
+.col-45r{
+	float: right;
+	width: 45%;
+	margin-top: 6px;
+	margin-left: 10px;
+}
+.col-50{
+	float: left;
+	width: 50%;
+	margin-top: 6px;
+}
+.col-65 {
+	float: left;
+	width: 65%;
+	margin-top: 6px;
+	text-align: left;
+}
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+.col-75m {
+	margin-left: 30%;
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+.col-100 {
+	float: left;
+	width: 100%;
+	margin-top: 6px;
+}
+
+
+/*Education Status*/
+.eStatus {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.eStatus input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.eStatus:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.eStatus input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.eStatus input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.eStatus .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.btns{
+	margin-top: 20px;
+}
+/* Input text validation */
+#message {
+	width: 200px;
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	margin-left: 0px;
+	float: left;
+	margin-top: 6px;
+	
+}
+
+#message p {
+	padding: 1px 5px;
+	font-size: 14px;
+}
+#message1 {
+	width: 200px;
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	margin-left: 0px;
+	float: left;
+	margin-top: 6px;
+}
+
+#message1 p {
+	padding: 1px 5px;
+	font-size: 14px;
+}
+#errM {
+	width: 200px;
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	float: left;
+	margin-top: 6px;
+	word-wrap: break-word;
+	
+}
+
+#errM p {
+	padding: 1px 5px;
+	font-size: 14px;
+	word-wrap: break-word;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+	color: green;
+	line-height: 150%;
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+	color: red;
+	line-height: 150%;
+	word-wrap: break-word;
+}
+
+
+.msg{
+	margin-left: 0;
+}
+/*Reflection page scroll activate*/
+.read{
+	height: 70vh;
+	overflow-y: scroll;
+}

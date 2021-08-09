@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>WEB222 | ZHICHENG LIN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<link href="normalize.css" rel="stylesheet" />
+	<script src="info.js"></script>
+	
+</head>	
+   
+<body>
+
+    <!--wrapper start-->
+    <div class="wrapper">
+        <!--header start-->
+        <div class="header">
+            <div class="header-menu">
+                <div class="title"><h1>HEADEr</h1></div>
+                
+            </div>
+        </div>
+        <!--header menu end-->
+        <!--sidebar start-->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+               <ul>
+                <li class="item">
+                    <a href="honesty.html" class="menu-btn">
+                        <span>Welcome Page</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="info.html" class="menu-btn">
+                        <span>User Info Page</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="reflection.html" class="menu-btn">
+                        <span>Reflection Page</span>
+                    </a>
+                </li>
+               </ul>
+            </div>
+        </div>
+        <!--sidebar end-->
+<!--main container start-->
+<div class="main-container1">
+	<div class="card">
+		<div class="content">
+			<div class="container">
+			  <form method="post" action="https://httpbin.org/post" name="signup">
+			  <div class="row">
+				<div class="col-45l">
+				  <input type="text" placeholder="First Name e.g (Abcd)" title="First Name" id="firstName" autocomplete="off" required>
+				</div>
+			  	<div class="col-45r">
+				  <input type="text" placeholder="Last Name e.g (Efgh)" title="Last Name" id="lName" autocomplete="off" required>
+				</div>
+
+			  </div>
+
+			  <div class="row">
+				<div class="col-45r">
+				  <input type="email" placeholder="Email e.g (a@b.c)" title="Email" id="email" autocomplete="off" required>
+				</div>
+				<div class="col-45l">
+				  <input type="text" placeholder="Username e.g (user123)" title="Username" id="username" autocomplete="off" required>
+				</div>
+			  </div>
+			  
+			  <div class="rows">
+			  	<div class="col-65">
+				<div class="col-25">
+				<label for="education" class="row label2">Education Level</label>
+
+				<select id="education" name="education">
+			  		<option value="0">-select-</option>
+			  		<option value="Technical Diploma">Technical Diploma</option>
+			  		<option value="College Diploma">College Diploma</option>
+			  		<option value="Bachelor's Degree">Bachelor's Degree</option>
+			  		<option value="Master's Degree">Master's Degree</option>
+			  		<option value="Others">Others</option>
+				  
+				</select>
+				</div>
+				<div class="col-35r">
+					<label class="row label2">Education Status</label>
+					<label class="eStatus">Graduated
+					  <input type="radio" name="eStatus" value="Graduated">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="eStatus">Current Enrolled
+					  <input type="radio" name="eStatus" value="Current Enrolled">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="eStatus">Did not graduate
+					  <input type="radio" name="eStatus" value="Did not graduate">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+				</div>
+				<div class="col-25">
+				  <input type="number" placeholder="Age between 18 and 60 years" title="Age" id="age" name="age" autocomplete="off" required>
+				</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="col-75">
+				  <input type="password" placeholder="Password e.g (aBcd1234)" title="Password" id="password" required>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-75">
+				  <input type="password" id="passwordConf" placeholder="Confirm Password NB. Passwords must match" title="Re-Enter Password" required>
+				</div>
+			  </div><br>
+			  <div class="row">
+			  <div class="btns"> 
+			  	<input type="submit" value="Submit" onclick="return dataValidation()">
+				<input type="reset" value="Reset">
+			  </div>
+				
+			  </div>
+			  </form>
+			  <!--The hidden fields -->
+				<input type="hidden" name="lastName" id="lastName" value="Lin" />
+				<input type="hidden" name="studentId" id="studentId" value="131543159" />
+
+
+			</div>
+			
+		</div>
+		
+			<!--<div id="message" class="msg">
+				  <h3>Password must contain the following:</h3>
+				  <p id="letter" class="invalid">A <b>lowercase</b> first letter</p>
+				  <p id="capital" class="invalid">A <b>capital</b> letter</p>
+				  <p id="number" class="invalid">A <b>number</b></p>
+				  <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+			</div>
+			<div id="message1" class="msg">
+				  <h3>Passwords must match</h3>
+				  <p id="msg" class="invalid">Passwords match</p>
+			</div>-->
+	</div> 
+</div>
+
+<!--main container end-->
+<!--SIDE PANEL start-->
+<div class="main-panel">
+	<div class="card">
+		<div class="content">
+			<div id="message" class="msg">
+				  <h4>Password must contain</h4>
+				  <p id="letter" class="invalid">A <b>lowercase</b> first letter</p>
+				  <p id="capital" class="invalid">A <b>capital</b> letter</p>
+				  <p id="number" class="invalid">A <b>number</b></p>
+				  <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+			</div>
+			<div id="message1" class="msg">
+				  <h4>Passwords must match</h4>
+				  <p id="msg" class="invalid">Passwords match</p>
+			</div>
+			<div id="errM" class="msg">
+				<h4>Some errors in your info</h4>
+				 <p id="errMp" class="invalid"></p>
+				 <p id="errMp1" class="invalid"></p>
+				 <p id="errMp2" class="invalid"></p>
+			</div>
+		</div>
+	</div> 
+</div>
+<!--main container end-->
+<div class="footer">
+	<div class="footer-menu">
+		<div class="title">
+              <p>
+              	<a href="https://github.com/zlin68/Final_Assessment/upload">Public GitHub Link</a>
+              </p>
+               
+               </div>
+                
+	</div>
+</div>
+    </div>
+    <!--wrapper end-->    
+</body>
+</html>
